@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>算法复杂度 | PYY在线笔记</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/study/img/logo.png">
+    <meta name="description" content="PYY在线笔记">
+    
+    <link rel="preload" href="/study/assets/css/0.styles.f503b9f0.css" as="style"><link rel="preload" href="/study/assets/js/app.dc60e210.js" as="script"><link rel="preload" href="/study/assets/js/6.fceef279.js" as="script"><link rel="preload" href="/study/assets/js/51.cb5601bb.js" as="script"><link rel="prefetch" href="/study/assets/js/10.7ed69d34.js"><link rel="prefetch" href="/study/assets/js/11.9448c32e.js"><link rel="prefetch" href="/study/assets/js/12.86c493c7.js"><link rel="prefetch" href="/study/assets/js/13.9ed58975.js"><link rel="prefetch" href="/study/assets/js/14.48e59348.js"><link rel="prefetch" href="/study/assets/js/15.b5bdf29c.js"><link rel="prefetch" href="/study/assets/js/16.7e65e129.js"><link rel="prefetch" href="/study/assets/js/17.d21d2357.js"><link rel="prefetch" href="/study/assets/js/18.ff6a09ec.js"><link rel="prefetch" href="/study/assets/js/19.4dd597a5.js"><link rel="prefetch" href="/study/assets/js/2.6082ecbd.js"><link rel="prefetch" href="/study/assets/js/20.13424f64.js"><link rel="prefetch" href="/study/assets/js/21.d0a93e41.js"><link rel="prefetch" href="/study/assets/js/22.3157d1d1.js"><link rel="prefetch" href="/study/assets/js/23.bf30424e.js"><link rel="prefetch" href="/study/assets/js/24.6e0cd257.js"><link rel="prefetch" href="/study/assets/js/25.85fbb512.js"><link rel="prefetch" href="/study/assets/js/26.c54e0c14.js"><link rel="prefetch" href="/study/assets/js/27.6da488a3.js"><link rel="prefetch" href="/study/assets/js/28.321038ce.js"><link rel="prefetch" href="/study/assets/js/29.3fe454c4.js"><link rel="prefetch" href="/study/assets/js/3.e7c144f8.js"><link rel="prefetch" href="/study/assets/js/30.2c2ed4ad.js"><link rel="prefetch" href="/study/assets/js/31.99fb9619.js"><link rel="prefetch" href="/study/assets/js/32.5aea4bba.js"><link rel="prefetch" href="/study/assets/js/33.8ed67f2e.js"><link rel="prefetch" href="/study/assets/js/34.4eb2a764.js"><link rel="prefetch" href="/study/assets/js/35.32c83c52.js"><link rel="prefetch" href="/study/assets/js/36.0e7c4410.js"><link rel="prefetch" href="/study/assets/js/37.029a3bab.js"><link rel="prefetch" href="/study/assets/js/38.9404c1e2.js"><link rel="prefetch" href="/study/assets/js/39.99a331b6.js"><link rel="prefetch" href="/study/assets/js/4.5e539c6c.js"><link rel="prefetch" href="/study/assets/js/40.68a12f82.js"><link rel="prefetch" href="/study/assets/js/41.f802eb8f.js"><link rel="prefetch" href="/study/assets/js/42.9353144d.js"><link rel="prefetch" href="/study/assets/js/43.58a525e4.js"><link rel="prefetch" href="/study/assets/js/44.d327c357.js"><link rel="prefetch" href="/study/assets/js/45.54dc5bdd.js"><link rel="prefetch" href="/study/assets/js/46.97eb4353.js"><link rel="prefetch" href="/study/assets/js/47.d0f5dd26.js"><link rel="prefetch" href="/study/assets/js/48.c71e0efd.js"><link rel="prefetch" href="/study/assets/js/49.c4bf96d9.js"><link rel="prefetch" href="/study/assets/js/5.49f21cfc.js"><link rel="prefetch" href="/study/assets/js/50.a9f40bc0.js"><link rel="prefetch" href="/study/assets/js/52.f4b73d57.js"><link rel="prefetch" href="/study/assets/js/7.e9fa99bf.js"><link rel="prefetch" href="/study/assets/js/8.60f08f23.js"><link rel="prefetch" href="/study/assets/js/9.1ebd5ad9.js">
+    <link rel="stylesheet" href="/study/assets/css/0.styles.f503b9f0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/study/" class="home-link router-link-active"><img src="/study/img/logo.png" alt="PYY在线笔记" class="logo"> <span class="site-name can-hide">PYY在线笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/study/技术方案/" class="nav-link">
+  技术方案
+</a></div><div class="nav-item"><a href="/study/Java技术栈/" class="nav-link">
+  Java技术栈
+</a></div><div class="nav-item"><a href="/study/分布式/" class="nav-link">
+  分布式
+</a></div><div class="nav-item"><a href="/study/大数据/" class="nav-link">
+  大数据
+</a></div><div class="nav-item"><a href="/study/消息队列/" class="nav-link">
+  消息队列
+</a></div><div class="nav-item"><a href="/study/数据结构和算法/" class="nav-link">
+  数据结构和算法
+</a></div><div class="nav-item"><a href="/study/k8s/" class="nav-link">
+  k8s
+</a></div><div class="nav-item"><a href="/study/ServiceMesh/" class="nav-link">
+  ServiceMesh
+</a></div><div class="nav-item"><a href="/study/DevOps/" class="nav-link">
+  DevOps
+</a></div><div class="nav-item"><a href="/study/总结/" class="nav-link">
+  总结
+</a></div><div class="nav-item"><a href="https://www.jianshu.com/u/af08f637aff8" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/study/技术方案/" class="nav-link">
+  技术方案
+</a></div><div class="nav-item"><a href="/study/Java技术栈/" class="nav-link">
+  Java技术栈
+</a></div><div class="nav-item"><a href="/study/分布式/" class="nav-link">
+  分布式
+</a></div><div class="nav-item"><a href="/study/大数据/" class="nav-link">
+  大数据
+</a></div><div class="nav-item"><a href="/study/消息队列/" class="nav-link">
+  消息队列
+</a></div><div class="nav-item"><a href="/study/数据结构和算法/" class="nav-link">
+  数据结构和算法
+</a></div><div class="nav-item"><a href="/study/k8s/" class="nav-link">
+  k8s
+</a></div><div class="nav-item"><a href="/study/ServiceMesh/" class="nav-link">
+  ServiceMesh
+</a></div><div class="nav-item"><a href="/study/DevOps/" class="nav-link">
+  DevOps
+</a></div><div class="nav-item"><a href="/study/总结/" class="nav-link">
+  总结
+</a></div><div class="nav-item"><a href="https://www.jianshu.com/u/af08f637aff8" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Dev Ops</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Java技术栈</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Service Mesh</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>K 8 S</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>分布式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>大数据</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>总结</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>技术方案</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>数据结构和算法</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/study/shu-ju-jie-gou-he-suan-fa/" aria-current="page" class="sidebar-link">开篇寄语</a></li><li><a href="/study/shu-ju-jie-gou-he-suan-fa/pai-xu.html" class="sidebar-link">排序</a></li><li><a href="/study/shu-ju-jie-gou-he-suan-fa/suan-fa-fu-za-du.html" aria-current="page" class="active sidebar-link">算法复杂度</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study/shu-ju-jie-gou-he-suan-fa/suan-fa-fu-za-du.html#一、-算法的时间复杂度" class="sidebar-link">一、 算法的时间复杂度</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study/shu-ju-jie-gou-he-suan-fa/suan-fa-fu-za-du.html#_1-1-常见的时间复杂度量级" class="sidebar-link">1.1 常见的时间复杂度量级</a></li></ul></li><li class="sidebar-sub-header"><a href="/study/shu-ju-jie-gou-he-suan-fa/suan-fa-fu-za-du.html#二、-算法的空间复杂度" class="sidebar-link">二、 算法的空间复杂度</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study/shu-ju-jie-gou-he-suan-fa/suan-fa-fu-za-du.html#_2-1-常见空间复杂度" class="sidebar-link">2.1 常见空间复杂度</a></li></ul></li></ul></li><li><a href="/study/shu-ju-jie-gou-he-suan-fa/suan-fa-ti-leetcode.html" class="sidebar-link">常见算法题</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>消息队列</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="算法复杂度"><a href="#算法复杂度" class="header-anchor">#</a> 算法复杂度</h1> <p>算法（Algorithm）是指用来操作数据、解决程序问题的一组方法。对于同一个问题，使用不同的算法，也许最终得到的结果是一样的，但在过程中消耗的资源和时间却会有很大的区别。</p> <p>那么我们应该如何去衡量不同算法之间的优劣呢？</p> <p>主要还是从算法所占用的「时间」和「空间」两个维度去考量。</p> <ul><li>时间维度：是指执行当前算法所消耗的时间，我们通常用「时间复杂度」来描述。</li> <li>空间维度：是指执行当前算法需要占用多少内存空间，我们通常用「空间复杂度」来描述。</li></ul> <p>因此，评价一个算法的效率主要是看它的时间复杂度和空间复杂度情况。然而，有的时候时间和空间却又是「鱼和熊掌」，不可兼得的，那么我们就需要从中去取一个平衡点。</p> <p>下面我来分别介绍一下「时间复杂度」和「空间复杂度」的计算方式。</p> <h2 id="一、-算法的时间复杂度"><a href="#一、-算法的时间复杂度" class="header-anchor">#</a> 一、 算法的时间复杂度</h2> <blockquote><p>算法的执行时间与输入值的关系</p></blockquote> <p>我们想要知道一个算法的「时间复杂度」，很多人首先想到的的方法就是把这个算法程序运行一遍，那么它所消耗的时间就自然而然知道了。</p> <p>这种方式可以吗？当然可以，不过它也有很多弊端。
+这种方式非常容易受运行环境的影响，在性能高的机器上跑出来的结果与在性能低的机器上跑的结果相差会很大。而且对测试时使用的数据规模也有很大关系。再者，并我们在写算法的时候，还没有办法完整的去运行呢。</p> <p>因此，另一种更为通用的方法就出来了：「 <strong>大O符号表示法</strong> 」，即 T(n) = O(f(n))</p> <p>我们先来看个例子：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+   j <span class="token operator">=</span> i<span class="token punctuation">;</span>
+   j<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>通过「 大O符号表示法 」，这段代码的时间复杂度为：O(n) ，为什么呢?</p> <p>在 大O符号表示法中，时间复杂度的公式是： T(n) = O( f(n) )，其中f(n) 表示每行代码执行次数之和，而 O 表示正比例关系，这个公式的全称是：<strong>算法的渐进时间复杂度</strong>。</p> <p>我们继续看上面的例子，假设每行代码的执行时间都是一样的，我们用 1颗粒时间 来表示，那么这个例子的第一行耗时是1个颗粒时间，第三行的执行时间是 n个颗粒时间，第四行的执行时间也是 n个颗粒时间（第二行和第五行是符号，暂时忽略），那么总时间就是 1颗粒时间 + n颗粒时间 + n颗粒时间 ，即 (1+2n)个颗粒时间，即： T(n) = (1+2n)*颗粒时间，从这个结果可以看出，这个算法的耗时是随着n的变化而变化，因此，我们可以简化的将这个算法的时间复杂度表示为：T(n) = O(n)</p> <p>为什么可以这么去简化呢，因为大O符号表示法并不是用于来真实代表算法的执行时间的，它是用来表示代码执行时间的增长变化趋势的。</p> <p>所以上面的例子中，如果n无限大的时候，T(n) = time(1+2n)中的常量1就没有意义了，倍数2也意义不大。因此直接简化为T(n) = O(n) 就可以了。</p> <h3 id="_1-1-常见的时间复杂度量级"><a href="#_1-1-常见的时间复杂度量级" class="header-anchor">#</a> 1.1 常见的时间复杂度量级</h3> <ul><li>常数阶O(1)</li> <li>对数阶O(logN)</li> <li>线性阶O(n)</li> <li>线性对数阶O(nlogN)</li> <li>平方阶O(n²)</li> <li>立方阶O(n³)</li> <li>K次方阶O(n^k)</li> <li>指数阶(2^n)</li></ul> <p>上面从上至下依次的时间复杂度越来越大，执行的效率越来越低。</p> <p>下面选取一些较为常用的来讲解一下（没有严格按照顺序）：</p> <h4 id="常数阶o-1"><a href="#常数阶o-1" class="header-anchor">#</a> 常数阶O(1)</h4> <p>无论代码执行了多少行，只要是没有循环等复杂结构，那这个代码的时间复杂度就都是O(1)，如：</p> <div class="language-text extra-class"><pre class="language-text"><code>int i = 1;
+int j = 2;
+++i;
+j++;
+int m = i + j;
+</code></pre></div><p>上述代码在执行的时候，它消耗的时候并不随着某个变量的增长而增长，那么无论这类代码有多长，即使有几万几十万行，都可以用O(1)来表示它的时间复杂度。</p> <h4 id="对数阶o-logn"><a href="#对数阶o-logn" class="header-anchor">#</a> 对数阶O(logN)</h4> <p>还是先来看代码：</p> <div class="language-text extra-class"><pre class="language-text"><code>int i = 1;
+while(i&lt;n)
+{
+    i = i * 2;
+}
+</code></pre></div><p>从上面代码可以看到，在while循环里面，每次都将 i 乘以 2，乘完之后，i 距离 n 就越来越近了。我们试着求解一下，假设循环x次之后，i 就大于 2 了，此时这个循环就退出了，也就是说 2 的 x 次方等于 n，那么 x = log2^n
+也就是说当循环 log2^n 次以后，这个代码就结束了。因此这个代码的时间复杂度为：<strong>O(logn)</strong></p> <h4 id="线性阶o-n"><a href="#线性阶o-n" class="header-anchor">#</a> 线性阶O(n)</h4> <p>这个在最开始的代码示例中就讲解过了，如：</p> <div class="language-text extra-class"><pre class="language-text"><code>for(i=1; i&lt;=n; ++i)
+{
+   j = i;
+   j++;
+}
+</code></pre></div><p>这段代码，for循环里面的代码会执行n遍，因此它消耗的时间是随着n的变化而变化的，因此这类代码都可以用O(n)来表示它的时间复杂度。</p> <h4 id="线性对数阶o-nlogn"><a href="#线性对数阶o-nlogn" class="header-anchor">#</a> 线性对数阶O(nlogN)</h4> <p>线性对数阶O(nlogN) 其实非常容易理解，将时间复杂度为O(logn)的代码循环N遍的话，那么它的时间复杂度就是 n * O(logN)，也就是了O(nlogN)。</p> <p>就拿上面的代码加一点修改来举例：</p> <div class="language-text extra-class"><pre class="language-text"><code>for(m=1; m&lt;n; m++)
+{
+    i = 1;
+    while(i&lt;n)
+    {
+        i = i * 2;
+    }
+}
+</code></pre></div><h4 id="平方阶o-n2"><a href="#平方阶o-n2" class="header-anchor">#</a> 平方阶O(n²)</h4> <p>平方阶O(n²) 就更容易理解了，如果把 O(n) 的代码再嵌套循环一遍，它的时间复杂度就是 O(n²) 了。
+举例：</p> <div class="language-text extra-class"><pre class="language-text"><code>for(x=1; i&lt;=n; x++)
+{
+   for(i=1; i&lt;=n; i++)
+    {
+       j = i;
+       j++;
+    }
+}
+</code></pre></div><p>这段代码其实就是嵌套了2层n循环，它的时间复杂度就是 O(n*n)，即 O(n²)
+如果将其中一层循环的n改成m，即：</p> <div class="language-text extra-class"><pre class="language-text"><code>for(x=1; i&lt;=m; x++)
+{
+   for(i=1; i&lt;=n; i++)
+    {
+       j = i;
+       j++;
+    }
+}
+</code></pre></div><p>那它的时间复杂度就变成了 O(m*n)</p> <h4 id="立方阶o-n3-、-k次方阶o-n-k"><a href="#立方阶o-n3-、-k次方阶o-n-k" class="header-anchor">#</a> 立方阶O(n³)**、**K次方阶O(n^k)</h4> <p>参考上面的O(n²) 去理解就好了，O(n³)相当于三层n循环，其它的类似。</p> <p>除此之外，其实还有 平均时间复杂度、均摊时间复杂度、最坏时间复杂度、最好时间复杂度 的分析方法，有点复杂，这里就不展开了。</p> <h2 id="二、-算法的空间复杂度"><a href="#二、-算法的空间复杂度" class="header-anchor">#</a> 二、 算法的空间复杂度</h2> <blockquote><p>算法的存储空间与输入值的关系</p></blockquote> <p>既然时间复杂度不是用来计算程序具体耗时的，那么我也应该明白，空间复杂度也不是用来计算程序实际占用的空间的。</p> <p>空间复杂度是对一个算法在运行过程中临时占用存储空间大小的一个量度，同样反映的是一个趋势，我们用 S(n) 来定义。</p> <p>空间复杂度比较常用的有：O(1)、O(n)、O(n²)，我们下面来看看：</p> <h3 id="_2-1-常见空间复杂度"><a href="#_2-1-常见空间复杂度" class="header-anchor">#</a> 2.1 常见空间复杂度</h3> <p>空间复杂度比较常用的有：O(1)、O(n)、O(n²)</p> <h4 id="空间复杂度-o-1"><a href="#空间复杂度-o-1" class="header-anchor">#</a> 空间复杂度 O(1)</h4> <p>如果算法执行所需要的临时空间不随着某个变量n的大小而变化，即此算法空间复杂度为一个常量，可表示为 O(1)
+举例：</p> <div class="language-text extra-class"><pre class="language-text"><code>int i = 1;
+int j = 2;
+++i;
+j++;
+int m = i + j;
+</code></pre></div><p>代码中的 i、j、m 所分配的空间都不随着处理数据量变化，因此它的空间复杂度 S(n) = O(1)</p> <h4 id="空间复杂度-o-n"><a href="#空间复杂度-o-n" class="header-anchor">#</a> 空间复杂度 O(n)</h4> <p>我们先看一个代码：</p> <div class="language-text extra-class"><pre class="language-text"><code>int[] m = new int[n]
+for(i=1; i&lt;=n; ++i)
+{
+   j = i;
+   j++;
+}
+</code></pre></div><p>这段代码中，第一行new了一个数组出来，这个数据占用的大小为n，这段代码的2-6行，虽然有循环，但没有再分配新的空间，因此，这段代码的空间复杂度主要看第一行即可，即 S(n) = O(n)</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/study/shu-ju-jie-gou-he-suan-fa/pai-xu.html" class="prev">
+        排序
+      </a></span> <span class="next"><a href="/study/shu-ju-jie-gou-he-suan-fa/suan-fa-ti-leetcode.html">
+        常见算法题
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/study/assets/js/app.dc60e210.js" defer></script><script src="/study/assets/js/6.fceef279.js" defer></script><script src="/study/assets/js/51.cb5601bb.js" defer></script>
+  </body>
+</html>
